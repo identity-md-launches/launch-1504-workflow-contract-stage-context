@@ -1,0 +1,22 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Sorn",
+    "symbol": "SORN",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "SorenVault",
+      "constructorArgs": ["$owner"]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "SorenVault runs seven sequential, prefunded SORN puzzles with paid commit-reveal guesses. Its immutable owner is supplied by $owner. After deployment, the owner must set the deployed LaunchToken address once via setToken before funding and play; the factory performs no initialization calls. The owner cannot withdraw funded prizes."
+}
